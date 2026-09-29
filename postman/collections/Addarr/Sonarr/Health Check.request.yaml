@@ -1,0 +1,8 @@
+$kind: http-request
+name: Health Check
+description: Check health of Sonarr API.
+url: "{{sonarr_base_url}}/health"
+method: GET
+headers:
+  X-Api-Key: "{{sonarr_apikey}}"
+order: 1000

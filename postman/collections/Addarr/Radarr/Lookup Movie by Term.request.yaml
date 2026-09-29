@@ -1,0 +1,12 @@
+$kind: http-request
+description: Search for a movie by title. Returns a list of matching movies from TMDB.
+method: GET
+url: "{{radarr_base_url}}/movie/lookup?term=Inception"
+headers:
+  X-Api-Key: "{{radarr_apikey}}"
+order: 1000
+queryParams:
+  - key: term
+    value: Inception
+    disabled: false
+    description: Movie title to search for

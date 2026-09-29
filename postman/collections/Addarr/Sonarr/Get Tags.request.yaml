@@ -1,0 +1,8 @@
+$kind: http-request
+description: Retrieve all tags configured in Sonarr. Used to look up existing
+  tags before adding a series.
+method: GET
+url: "{{sonarr_base_url}}/tag"
+headers:
+  X-Api-Key: "{{sonarr_apikey}}"
+order: 10000

@@ -1,0 +1,52 @@
+name: Addarr
+values:
+  - key: sonarr_url_protocol
+    value: 'http'
+    description: Sonarr URL protocol (http|https)
+    type: default
+    enabled: true
+  - key: sonarr_host
+    value: 'localhost'
+    description: Sonarr host address
+    type: default
+    enabled: true
+  - key: sonarr_port
+    value: '8989'
+    description: Sonarr service port for Login authentication
+    type: default
+    enabled: true
+  - key: sonarr_api_path
+    value: '/api/v3'
+    description: Sonarr API path
+    type: default
+    enabled: true
+  - key: sonarr_apikey
+    value: 'REPLACE_WITH_YOUR_API_KEY'
+    description: Sonarr API key
+    type: default
+    enabled: true
+  - key: radarr_url_protocol
+    value: 'http'
+    description: Radarr URL protocol (http|https)
+    type: default
+    enabled: true
+  - key: radarr_host
+    value: 'localhost'
+    description: Radarr host address
+    type: default
+    enabled: true
+  - key: radarr_port
+    value: '7878'
+    description: Radarr service port for Login authentication
+    type: default
+    enabled: true
+  - key: radarr_api_path
+    value: '/api/v3'
+    description: Radarr API path
+    type: default
+    enabled: true
+  - key: radarr_apikey
+    value: 'REPLACE_WITH_YOUR_API_KEY'
+    description: Radarr API key
+    type: default
+    enabled: true

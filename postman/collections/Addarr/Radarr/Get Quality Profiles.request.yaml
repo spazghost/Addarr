@@ -1,0 +1,7 @@
+$kind: http-request
+description: Retrieve all quality profiles configured in Radarr. Used to present quality options when adding a movie.
+method: GET
+url: "{{radarr_base_url}}/qualityProfile"
+headers:
+  X-Api-Key: "{{radarr_apikey}}"
+order: 7000

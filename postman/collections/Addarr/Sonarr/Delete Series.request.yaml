@@ -1,0 +1,17 @@
+$kind: http-request
+description: Remove a series from the Sonarr library by its internal database
+  ID. deleteFiles=true also removes files from disk.
+method: DELETE
+url: "{{sonarr_base_url}}/series/{{sonarr_series_id}}?deleteFiles=True"
+headers:
+  X-Api-Key: "{{sonarr_apikey}}"
+order: 7000
+queryParams:
+  - key: deleteFiles
+    value: "True"
+    disabled: false
+    description: Set to True to also delete files from disk
+pathVariables:
+  - key: sonarr_series_id
+    value: "1"
+    description: Internal Sonarr database ID of the series

@@ -1,0 +1,10 @@
+$kind: collection
+description: |-
+  API collection for Addarr — a Telegram bot that interfaces with Sonarr, Radarr, SABnzbd, and Transmission.
+  This Postman collection currently supports only Sonarr and Radarr.
+
+  Endpoints are grouped by service. Use the **Addarr** environment to configure your server
+  addresses and API keys before sending requests.
+variables:
+  sonarr_base_url: "{{sonarr_url_protocol}}://{{sonarr_host}}:{{sonarr_port}}{{sonarr_api_path}}"
+  radarr_base_url: "{{radarr_url_protocol}}://{{radarr_host}}:{{radarr_port}}{{radarr_api_path}}"
