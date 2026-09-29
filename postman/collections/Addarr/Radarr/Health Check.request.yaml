@@ -1,0 +1,7 @@
+$kind: http-request
+description: Check health of Radarr API.
+method: GET
+url: "{{radarr_base_url}}/health"
+headers:
+  X-Api-Key: "{{radarr_apikey}}"
+order: 316

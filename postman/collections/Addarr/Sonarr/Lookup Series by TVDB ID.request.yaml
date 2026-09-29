@@ -1,0 +1,13 @@
+$kind: http-request
+description: Look up a specific series by its TVDB ID. Used before adding a
+  series to the library.
+method: GET
+url: "{{sonarr_base_url}}/series/lookup?term=tvdb:81189"
+headers:
+  X-Api-Key: "{{sonarr_apikey}}"
+order: 4000
+queryParams:
+  - key: term
+    value: tvdb:81189
+    disabled: false
+    description: TVDB ID prefixed with "tvdb:" e.g. tvdb:81189

@@ -1,0 +1,25 @@
+$kind: http-request
+description: Add a new movie to the Radarr library. Requires tmdbId, title, titleSlug, year, images, qualityProfileId, rootFolderPath, and other options.
+method: POST
+url: "{{radarr_base_url}}/movie"
+order: 4000
+headers:
+  Content-Type: application/json
+  X-Api-Key: "{{radarr_apikey}}"
+body:
+  type: json
+  content: |-
+    {
+      "tmdbId": 27205,
+      "title": "Inception",
+      "titleSlug": "inception",
+      "year": 2010,
+      "qualityProfileId": 1,
+      "rootFolderPath": "/movies",
+      "minimumAvailability": "announced",
+      "tags": [],
+      "images": [],
+      "addOptions": {
+        "searchForMovie": true
+      }
+    }

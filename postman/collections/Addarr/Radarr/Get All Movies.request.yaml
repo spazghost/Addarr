@@ -1,0 +1,7 @@
+$kind: http-request
+description: Retrieve all movies currently in the Radarr library. Used to check if a movie is already in the library and to list all movies.
+method: GET
+url: "{{radarr_base_url}}/movie"
+headers:
+  X-Api-Key: "{{radarr_apikey}}"
+order: 3000

@@ -1,0 +1,8 @@
+$kind: http-request
+description: Retrieve all configured root folders in Sonarr. Used to present
+  path options when adding a series.
+method: GET
+url: "{{sonarr_base_url}}/Rootfolder"
+headers:
+  X-Api-Key: "{{sonarr_apikey}}"
+order: 8000

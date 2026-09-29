@@ -1,0 +1,16 @@
+$kind: http-request
+description: Remove a movie from the Radarr library by its internal database ID. deleteFiles=True also removes files from disk.
+method: DELETE
+url: "{{radarr_base_url}}/movie/{{radarr_movie_id}}?deleteFiles=True"
+headers:
+  X-Api-Key: "{{radarr_apikey}}"
+order: 5000
+queryParams:
+  - key: deleteFiles
+    value: "True"
+    disabled: false
+    description: Set to True to also delete files from disk
+pathVariables:
+  - key: radarr_movie_id
+    value: "1"
+    description: Internal Radarr database ID of the movie

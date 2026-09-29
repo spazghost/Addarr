@@ -1,0 +1,12 @@
+$kind: http-request
+description: Search for a TV series by title. Returns a list of matching series from TVDB.
+method: GET
+url: "{{sonarr_base_url}}/series/lookup?term=Breaking Bad"
+headers:
+  X-Api-Key: "{{sonarr_apikey}}"
+order: 3000
+queryParams:
+  - key: term
+    value: Breaking Bad
+    disabled: false
+    description: Series title to search for
