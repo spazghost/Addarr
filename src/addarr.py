@@ -816,7 +816,7 @@ async def addSerieMovie(update, context):
     
     qualityProfile = context.user_data["qualityProfile"]
 
-    #Add tag for user 
+    #Add tag for user, or use the defaultTags + any chosen tags for root path.
     #TODO (creation does not work right now, creation should be manual)
     tags = []
     if service.config.get("addRequesterIdTag"):
@@ -828,7 +828,21 @@ async def addSerieMovie(update, context):
             if str(t["label"]) == str(update.effective_message.chat.id):
                 tags.append(str(t["id"]))
     if not tags:
-        tags = [int(t["id"]) for t in service.getTags() if t["label"] in service.config.get("defaultTags", [])]
+        selected_path = path.rstrip("/")
+        root_path_tags = {
+            configured_path.rstrip("/"): tag_names
+            for configured_path, tag_names in service.config.get("rootPathTags", {}).items()
+        }
+        tag_names = service.config.get("defaultTags", []) + root_path_tags.get(
+            selected_path, []
+        )
+        # Preserve order while avoiding duplicate names.
+        tag_names = list(dict.fromkeys(tag_names))
+        tags = [
+            int(tag["id"])
+            for tag in service.getTags()
+            if tag["label"] in tag_names
+        ]
     logger.debug(f"Tags {tags} have been selected.")
     
     if not service.inLibrary(idnumber):
