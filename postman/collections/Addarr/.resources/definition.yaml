@@ -5,8 +5,6 @@ description: |-
 
   Endpoints are grouped by service. Use the **Addarr** environment to configure your server
   addresses and API keys before sending requests.
-
-  Base URL pattern: http://<host>:<port><path>api/v3/<endpoint>?apikey=<apikey>
 variables:
   sonarr_base_url: "{{sonarr_url_protocol}}://{{sonarr_host}}:{{sonarr_port}}{{sonarr_api_path}}"
   radarr_base_url: "{{radarr_url_protocol}}://{{radarr_host}}:{{radarr_port}}{{radarr_api_path}}"

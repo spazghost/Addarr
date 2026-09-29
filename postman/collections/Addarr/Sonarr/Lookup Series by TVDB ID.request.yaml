@@ -5,7 +5,7 @@ method: GET
 url: "{{sonarr_base_url}}/series/lookup?term=tvdb:81189"
 headers:
   X-Api-Key: "{{sonarr_apikey}}"
-order: 4000
+order: 3000
 queryParams:
   - key: term
     value: tvdb:81189
