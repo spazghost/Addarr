@@ -1,0 +1,12 @@
+$kind: http-request
+description: Look up a specific movie by its TMDB ID. Used to fetch full movie data before adding to the library.
+method: GET
+url: "{{radarr_base_url}}/movie/lookup/tmdb?tmdbId=27205"
+headers:
+  X-Api-Key: "{{radarr_apikey}}"
+order: 2000
+queryParams:
+  - key: tmdbId
+    value: "27205"
+    disabled: false
+    description: TMDB ID of the movie (e.g. 27205 for Inception)

@@ -1,0 +1,7 @@
+$kind: http-request
+description: Retrieve all configured root folders in Radarr. Used to present path options when adding a movie.
+method: GET
+url: "{{radarr_base_url}}/Rootfolder"
+headers:
+  X-Api-Key: "{{radarr_apikey}}"
+order: 6000

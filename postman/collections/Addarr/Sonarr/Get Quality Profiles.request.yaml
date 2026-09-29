@@ -1,0 +1,8 @@
+$kind: http-request
+description: Retrieve all quality profiles configured in Sonarr. Used to present
+  quality options when adding a series.
+method: GET
+url: "{{sonarr_base_url}}/qualityProfile"
+headers:
+  X-Api-Key: "{{sonarr_apikey}}"
+order: 9000

@@ -1,0 +1,31 @@
+$kind: http-request
+description: Add a new TV series to the Sonarr library. Requires tvdbId, title,
+  titleSlug, images, seasons, qualityProfileId, rootFolderPath, and other
+  options.
+method: POST
+url: "{{sonarr_base_url}}/series"
+order: 6000
+headers:
+  Content-Type: application/json
+  X-Api-Key: "{{sonarr_apikey}}"
+body:
+  type: json
+  content: |-
+    {
+      "tvdbId": 81189,
+      "title": "Breaking Bad",
+      "titleSlug": "breaking-bad",
+      "qualityProfileId": 1,
+      "rootFolderPath": "/tv",
+      "seasonFolder": true,
+      "monitored": true,
+      "seriesType": "standard",
+      "tags": [],
+      "seasons": [],
+      "addOptions": {
+        "ignoreEpisodesWithFiles": true,
+        "ignoreEpisodesWithoutFiles": false,
+        "searchForMissingEpisodes": true
+      },
+      "images": []
+    }

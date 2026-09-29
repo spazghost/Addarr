@@ -1,0 +1,15 @@
+$kind: http-request
+description: Create a new tag in Radarr. Used to tag movies with the Telegram user ID or custom labels.
+method: POST
+url: "{{radarr_base_url}}/tag"
+order: 9000
+headers:
+  Content-Type: application/json
+  X-Api-Key: "{{radarr_apikey}}"
+body:
+  type: json
+  content: |-
+    {
+      "id": 1,
+      "label": "telegram"
+    }
