@@ -18,6 +18,15 @@ sonarr:
     - 
   defaultTags: # If set must be existing tags
     - telegram
+  # Map root paths to tags. Keep `{}` when unused.
+  # Example:
+  # rootPathTags:
+  #   "/path/to/root":
+  #     - tag1
+  #     - tag2
+  #   "/path/to/another_root":
+  #     - tag3
+  rootPathTags: {}
   addRequesterIdTag: true # Add telegram user id as tag on series
   adminRestrictions: false
 
@@ -41,6 +50,15 @@ radarr:
     - 
   defaultTags: # If set must be existing tags
     - telegram
+  # Map root paths to tags. Keep `{}` when unused.
+  # Example:
+  # rootPathTags:
+  #   "/path/to/root":
+  #     - tag1
+  #     - tag2
+  #   "/path/to/another_root":
+  #     - tag3
+  rootPathTags: {}
   addRequesterIdTag: true # Add telegram user id as tag on movie
   adminRestrictions: false
   
