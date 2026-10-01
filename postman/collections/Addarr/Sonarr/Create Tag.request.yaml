@@ -1,16 +1,11 @@
 $kind: http-request
-name: 'Create Tag'
-description: 'Create a new tag in Sonarr. Used to tag series with the Telegram
-  user ID or custom labels.'
+description: Create a new tag in Sonarr. Used to tag series with the Telegram user ID or custom labels.
 method: POST
-url: '{{sonarr_base_url}}/tag?apikey={{sonarr_apikey}}'
+url: "{{sonarr_base_url}}/tag"
 order: 11000
-queryParams:
-  - key: apikey
-    value: '{{sonarr_apikey}}'
 headers:
-  - key: Content-Type
-    value: application/json
+  Content-Type: application/json
+  X-Api-Key: "{{sonarr_apikey}}"
 body:
   type: json
   content: |-

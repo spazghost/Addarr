@@ -1,8 +1,7 @@
 $kind: http-request
-description: Retrieve all series currently in the Sonarr library. Used to check
-  if a series is already in the library and to list all series.
+description: Retrieve all series currently in the Sonarr library. Used to check if a series is already in the library and to list all series.
 method: GET
 url: "{{sonarr_base_url}}/series"
 headers:
   X-Api-Key: "{{sonarr_apikey}}"
-order: 5000
+order: 4000

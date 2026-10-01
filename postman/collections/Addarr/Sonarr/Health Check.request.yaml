@@ -5,4 +5,4 @@ url: "{{sonarr_base_url}}/health"
 method: GET
 headers:
   X-Api-Key: "{{sonarr_apikey}}"
-order: 1839
+order: 1000

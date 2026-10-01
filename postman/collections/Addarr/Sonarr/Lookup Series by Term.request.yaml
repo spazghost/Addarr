@@ -4,7 +4,7 @@ method: GET
 url: "{{sonarr_base_url}}/series/lookup?term=Breaking Bad"
 headers:
   X-Api-Key: "{{sonarr_apikey}}"
-order: 3000
+order: 2000
 queryParams:
   - key: term
     value: Breaking Bad
